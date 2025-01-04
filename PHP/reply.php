@@ -1,69 +1,18 @@
 <?php
-// // Database configuration
-// $servername = "localhost";
-// $username = "root";
-// $password = "";
-// $database = "yt_playlist";
-
-// // Create connection
-// $conn = new mysqli($servername, $username, $password, $database);
-
-// // Check connection
-// if ($conn->connect_error) {
-//     die("Connection failed: " . $conn->connect_error);
-// }
-
-// // Check if the form is submitted
-// if ($_SERVER["REQUEST_METHOD"] === "POST") {
-//     // Check which form is submitted
-//     if (isset($_POST['form_type'])) {
-//         $formType = $_POST['form_type'];
-
-//         if ($formType === "contact") {
-//             // Handle Contact Form
-//             $uid = mysqli_real_escape_string($conn, $_POST['uid']);
-//             $name = mysqli_real_escape_string($conn, $_POST['contact-name']);
-//             $email = mysqli_real_escape_string($conn, $_POST['contact-email']);
-//             $message = mysqli_real_escape_string($conn, $_POST['contact-message']);
-
-//             $sql = "INSERT INTO contact (namec, emailc, msgc, uid) VALUES ('$name', '$email', '$message', '$uid')";
-
-//         } elseif ($formType === "feedback") {
-//             // Handle Feedback Form
-//             $uid = mysqli_real_escape_string($conn, $_POST['uid']);
-//             $name = mysqli_real_escape_string($conn, $_POST['feedback-name']);
-//             $email = mysqli_real_escape_string($conn, $_POST['feedback-email']);
-//             $feedback = mysqli_real_escape_string($conn, $_POST['feedback-message']);
-
-//             $sql = "INSERT INTO feedback (namef, emailf, msgf, uid) VALUES ('$name', '$email', '$feedback', '$uid')";
-//         }
-
-//         // Execute the query
-//         if ($conn->query($sql) === TRUE) {
-//             echo "Record added successfully.";
-//         } else {
-//             echo "Error: " . $sql . "<br>" . $conn->error;
-//         }
-//     }
-// }
-
-// // Close connection
-// $conn->close();
-
 // reply.php
 session_start(); // Start the session
-
-// Check if the user is logged in
-if (!isset($_SESSION['user_id'])) {
-    header("Location: /Yt_Playlist/Html/signup_in.php");
-    exit();
-}
 
 // Database configuration
 $servername = "localhost";
 $username = "root";
 $password = "";
 $database = "yt_playlist";
+
+// Check if the user is logged in
+if (!isset($_SESSION['user_id'])) {
+    header("Location: /Yt_Playlist/Html/signup_in.php");
+    exit();
+}
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $database);

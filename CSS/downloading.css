@@ -1,0 +1,99 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.container {
+    margin: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+hr {
+    border: 1.5px solid black;
+    border-radius: 2px;
+}
+
+input {
+    border : 1px dashed;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    width: auto;
+    height: auto;
+}
+
+/* shining text */
+.shimmer-text {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #383737;
+    background: linear-gradient(90deg, #413f3f, #fff, #ccc);
+    background-size: 200% 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shimmer 3s infinite;
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: 200% 0;
+    }
+    100% {
+        background-position: -200% 0;
+    }
+}
+/* end of shining text */
+
+#downloadForm {
+    margin-top: 30px;
+}
+
+/* Header container */
+.header {
+    /* position : fixed; */
+    background-color: #dacacd;
+    /* border-bottom: 2px solid #ccc; */
+    padding: 10px 20px;
+    font-family: Arial, sans-serif;
+    width : 100%;
+    justify-content: space-around;
+}
+
+/* Navigation bar links */
+.nav-bar {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-bar a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    padding: 8px 12px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+.nav-bar a:hover {
+    background-color: #ddcdcf;
+    border-color: #000;
+}
+
+.nav-bar a:active {
+    background-color: #bbb;
+    color: #fff;
+}
+
+.logo {
+    width: 120px;
+    height: auto;   
+}
+
+.slogan {
+    font-family: 'Brush Script MT', cursive;
+}

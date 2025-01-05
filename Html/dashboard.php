@@ -319,7 +319,7 @@
             <!-- <a href="/Yt_Playlist/download/templates/index.php">Test</a> -->
             <a href="/Yt_Playlist/Html/sub.php">Subscription</a>
             <a href="#contact">Contact Us</a>
-            <a href="/Yt_Playlist/PHP/logout.php">Logout</a>
+            <a onclick="confirmLogout()">Logout</a>
             <p class="slogan centered" style="font-family: 'Brush Script MT', cursive; font-size : 30px; margin-left : 75px;">Learn. Connect. Succeed.</p>
         </div>
     </div>
@@ -432,7 +432,7 @@
                 <div class="testimonial-container">
                     <div class="testimonial-card">
                         <p class="user-r">"YouPlayList is an absolute game-changer! I can easily download my entire YouTube playlist in one click, and the quality is fantastic."</p>
-                        <h4 class="user-n">- Alex Johnson</h4>
+                        <h4 class="user-n">- Meet Gajjar</h4>
                     </div>
 
                     <div class="testimonial-card">
@@ -488,6 +488,20 @@
         }
 
         document.getElementById("loadMore").addEventListener("click", loadMoreReviews);
+
+
+        function confirmLogout() {
+            // Ask for confirmation
+            const userConfirmation = confirm("Are you sure you want to log out?");
+            
+            // If user clicks "OK", perform logout
+            if (userConfirmation) {
+            window.location.href = '/Yt_Playlist/Html/signup_in.php'; // Change this to your logout URL or logic
+            } else {
+            // If user clicks "Cancel", do nothing
+            console.log("Logout cancelled");
+            }
+        }
     </script>
 </body>
 </html>

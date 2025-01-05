@@ -67,13 +67,21 @@
                 width: 120px;
                 height : auto;
             }
+            /* Headline */
+            h1 {
+                font-family: 'Lora', serif;
+                font-size: 5rem;
+                font-style : italic;
+                font-weight: 700; /* Bold */
+                animation: fadeIn 1s ease-in;
+                line-height: 1.7;
+                color: #34495e;
+            }
+            /*  Spinning Disk */
             .vinyl {
-                /* position: absolute;    */
-                position : static;
-                /* top: 80%;
-                right: 10%; */
-                margin-left : 80%;
-                margin-top : 10%;
+                position: absolute;
+                top: 17%;
+                right: 2%;
                 width: 100px;
                 height: 100px;
                 background: url('/Yt_Playlist/Docs/vinyl.png') no-repeat center;
@@ -86,12 +94,54 @@
                 from { transform: rotate(0deg); }
                 to { transform: rotate(360deg); }
             }
-        footer {
-            background-color: #333;
-            color : white;
-            margin-bottom : 0px;
-            padding-bottom:0px;
-        }
+
+            /* Instructions */
+            li {
+                font-size: 1.2rem;
+                margin : 10px;
+                list-style-type : none;
+                text-align : left;
+                margin-left : 10%;
+                opacity: 0;
+                animation: fadeIn 1s ease-in-out forwards;
+            }
+            @keyframes fadeIn {
+                from { opacity: 0; transform: translateY(10px); }
+                to { opacity: 1; transform: translateY(0); }
+            }
+            .instruction li:nth-child(1) { animation-delay: 0.5s; }
+            .instruction li:nth-child(2) { animation-delay: 1s; }
+            .instruction li:nth-child(3) { animation-delay: 1.5s; }
+            .instruction li:nth-child(4) { animation-delay: 2s; }
+            .instruction li:nth-child(5) { animation-delay: 2.5s; }
+            .instruction li:nth-child(6) { animation-delay: 3s; }
+            .instruction li:nth-child(7) { animation-delay: 3.5s; }
+            
+            ul {
+                animation : fadeIn 1s ease-in;
+            }
+            .inst {
+                font-size: 2.2rem;
+                font-weight: bold;
+                margin : 20px;
+                text-align: center;
+                white-space: nowrap;
+                overflow: hidden;
+                color : red;
+                animation : blink 1.5s infinite;
+            }
+            @keyframes blink {
+                50% {
+                    opacity: 0;
+                }
+            }
+            /* Footer */
+            footer {
+                background-color: #333;
+                color : white;
+                margin-bottom : 0px;
+                padding-bottom:0px;
+            }
         </style>
     </head>
     <body>
@@ -119,6 +169,20 @@
             <div id="status" class="shimmer-text">
                 <p id="current">Waiting for download...</p>
                 <p id="error" style="color: red;"></p>
+            </div>
+
+            <div class="instruction">
+                 
+            <p class="inst"><strong>Please Follow These Instructions While Downloading : </strong></p>
+                <ul>
+                    <li><strong>Do Not Refresh or Close the Page</strong> while the process is running. Refreshing or closing the page may interrupt it and cause errors.</li>
+                    <li><strong>Do Not Enter Any Input</strong>; no user action is required at this stage. The system is processing your request.</li>
+                    <li><strong>Ensure enough Storage</strong>. The download process may require enough space as it downloads every videos in high quality.</li>
+                    <li><strong>Ensure a Stable Internet Connection</strong>. A slow or interrupted connection may delay processing.</li>
+                    <li><strong>Wait for Confirmation</strong>. Once processing is complete, you will see a confirmation message.</li>
+                    <li><strong>Downloaded File</strong>. After successful processing, check the download folder in your system to retrieve your file.</li>
+                    <li><strong>If You Face Any Issues</strong>. If the process takes too long or shows an error, try again later or <a href="/Yt_Playlist/Html/dashboard.php#contact">contact</a> support.</li>
+                </ul>
             </div>
 
             <script>

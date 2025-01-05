@@ -1,8 +1,17 @@
+<?php
+    session_start();
+
+    $email = $_SESSION['user_email'];
+    $uid = $_SESSION['user_id'];
+    // $email = "vadgamameet5@gmail.com";
+    // $uid = "3";
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/Yt_Playlist/Docs/favicon.png">
     <title>Subscription Plans</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/css/bootstrap.min.css">
     <style>
@@ -138,14 +147,6 @@
     </style>
 </head>
 <script>
-    <?php
-        session_start();
-
-        $email = $_SESSION['user_email'];
-        $uid = $_SESSION['user_id'];
-        // $email = "vadgamameet5@gmail.com";
-        // $uid = "3";
-    ?>
 </script>
 <body>
     <div class="header" id="header">

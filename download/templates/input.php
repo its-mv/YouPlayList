@@ -48,6 +48,17 @@
         }
     }
 
+    // Running the app.py file
+    // $output = [];
+    // $return_var = 0;
+    // exec('python C:/xampp/htdocs/Yt_Playlist/download/app.py 2>&1', $output, $return_var);
+
+    // if ($return_var !== 0) {
+    //     echo "Error executing script: " . implode("\n", $output);
+    // } else {
+    //     echo "Script executed successfully!";
+    // }
+
 ?>
 <!DOCTYPE html>
 <html lang="en">

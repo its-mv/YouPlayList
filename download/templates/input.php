@@ -38,7 +38,7 @@
         }
     }
     else {
-        if ($sub_limit == "Active") {
+        if ($sub_limit == "active") {
             $msg = '<br>You are allowed to download unlimited playlist.';
             $allow = 1;
         }

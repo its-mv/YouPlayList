@@ -38,7 +38,7 @@
     // Check if user is subscribed or not if sub is 1 then willshow some msg
     if ($sub->fetch_assoc()['sub'] == 1) {
         $time_period = $conn->query("SELECT Duration FROM subscription WHERE uid = '$uid'");
-        $sub_msg = "You have subscribed to our service for " . $time_period->fetch_assoc()['Duration'] . " Months.";
+        $sub_msg = "You have subscribed to our service for " . $time_period->fetch_assoc()['Duration'] . " Months.<h6>(From the date of purchase)</h6>";
     } else {
         $sub_msg = "\nYou have not subscribed to our service.";
     }
@@ -314,7 +314,7 @@
         <div class="nav-bar">
             <img src="/Yt_Playlist/Docs/logo.jpeg" class="logo-l" alt="Logo" style="width: 120px; height: 45px;">
             <a href="#header">Home</a>
-            <a href="signup_in.php">Login</a>
+            <!-- <a href="signup_in.php">Login</a> -->
             <a href="/Yt_Playlist/download/templates/input.php">Download Playlist</a>
             <!-- <a href="/Yt_Playlist/download/templates/index.php">Test</a> -->
             <a href="/Yt_Playlist/Html/sub.php">Subscription</a>

@@ -36,15 +36,15 @@
             if ($result->num_rows > 0) {
                 // User exists, check password
                 $user = $result->fetch_assoc();
-                // if (password_verify($password, $user['Pass'])) {
-                if ($user['Names'] === $password) {
+                if (password_verify($password, $user['Pass'])) {
+                // if ($user['Names'] === $password) {
                     // Password is correct, log the user in (set session)
-                    session_start();
+                    // session_start();
                     $_SESSION['user_id'] = $user['Uid']; // Assuming UserID is a field in the database
                     $_SESSION['user_email'] = $user['Email'];
                     $login_message = "Login successful! Welcome, " . $user['Fname'] . " " . $user['Lname'];
                     $_SESSION['login_message'] = $login_message;
-                    header("Location: dashboard.php"); // Redirect to the dashboard or home page
+                    header("Location: /Yt_Playlist/Html/dashboard.php"); // Redirect to the dashboard or home page
                     exit();
                 } else {
                     $login_message = "Error: Incorrect password.";
